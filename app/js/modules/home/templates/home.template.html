@@ -1,0 +1,35 @@
+    <ion-view title="FoodPoints">
+        <ion-content has-header="false" class="home-view">
+        <!--
+            <a class="button button-full button-outline" ui-sref="homeapp" ng-hide="showLogin()">
+                homeapp
+            </a>
+        -->
+            <a class="button button-full button-outline" ui-sref="mybalance" ng-show="showMyBalance()">
+                Mis puntos
+            </a>
+            <a class="button button-full button-outline" ui-sref="credit" ng-show="showCredit()">
+                Acumular
+            </a>
+            <a class="button button-full button-outline" ui-sref="debit" ng-show="showDebit()">
+                Canjear
+            </a>
+            <a class="button button-full button-outline" ui-sref="balance" ng-show="showBalance()">
+                Consultar puntos
+            </a>
+<!--
+            <a class="button button-full button-outline" ui-sref="profile">
+                My Profile
+            </a>
+        -->
+            <a class="button button-full button-outline" ui-sref="login" ng-show="showLogin()">
+                Login
+            </a>
+<!--
+            <a class="button button-full button-outline" ui-sref="register" ng-show="showRegister()">
+                Register
+            </a>
+-->
+            <button lb-logout>Logout</button>
+        </ion-content>
+    </ion-view>

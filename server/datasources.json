@@ -1,0 +1,23 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "mongodb",
+    "database": "foodpoints"
+  },
+  "mail": {
+    "name": "mail",
+    "defaultForType": "mail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.mandrillapp.com",
+        "port": 587,
+        "auth": {
+          "user": "Your-server-api-key",
+          "pass": "Your-server-api-key"
+        }
+      }
+    ]
+  }
+}

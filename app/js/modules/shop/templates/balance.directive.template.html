@@ -1,0 +1,26 @@
+<view>
+	<content has-header="true" scroll="true">
+
+	<form class="item item-text-wrap" ng-submit="submit()">
+		<div class="list">
+		  <label class="item item-input">
+		    <input type="email" placeholder="Email" ng-model="credentials.email">
+		  </label>
+		  <button class="button button-block button-positive">
+			Consultar puntos
+		  </button>
+		</div>
+	</form>
+
+            <div class="item item-divider assertive" ng-if="creditSuccess">
+                Puntos Acumulados
+                <label class="item item-input">
+		    		<input type="number" placeholder="Amount" ng-model="credentials.amount">
+		  		</label>
+            </div>
+            <div class="item item-divider assertive" ng-if="creditError">
+                Could not get balance!
+            </div>
+
+	</content>
+</view>

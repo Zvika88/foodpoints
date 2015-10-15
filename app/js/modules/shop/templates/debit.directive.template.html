@@ -1,0 +1,27 @@
+<view>
+    <content has-header="true" scroll="true">
+
+            <div class="item item-divider assertive" ng-if="creditSuccess">
+                Debit!
+            </div>
+            <div class="item item-divider assertive" ng-if="creditError">
+                Saldo insuficiente!
+            </div>
+
+	<form class="item item-text-wrap" ng-submit="submit()">
+		<div class="list">
+		  <label class="item item-input">
+		    <input type="email" placeholder="Email" ng-model="credentials.email">
+		  </label>
+		  <label class="item item-input">
+		    <input type="number" placeholder="Amount" ng-model="credentials.amount">
+		  </label>
+		  <button class="button button-block button-positive">
+			Canjear
+		  </button>
+		</div>
+	</form>
+
+    </content>
+</view>
+

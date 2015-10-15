@@ -1,0 +1,92 @@
+
+language: node_js
+
+node_js:
+  - 0.10.38
+
+addons:
+  firefox: "23.0"
+
+services:
+  - mongodb
+  - selenium
+
+env:
+  global:
+    # APP_UUID
+    - secure: gOk7LGcQbIbsKdAbPYKAghLwEOhjTXxFUwDCQep4isCP9xMUHt5KO+uzFAWyOxUeJ38VHwhQmBuDN2YiEmpHLmAomIf3HDUBl5jozTEzYCjYsBJEinccyGg2WPdE0E2IBTWHRDDjxQo1OuRncnhhXHH0VaZHiKC5h/1mgpzMwV7rD1XT3eDaH7ZcVYDq+qHTKSatEqSt6xjrNDZL26tqHcu6jbDXToG2ZRt8N8uQBuwZ8Jie/uaeAPG2WLFrkKU7+KLGxilrZQHayJUymlVkJDSyZczcIevWiYXsdNqmj7oNTZThelwULNcoaJ7aqYOLNA2G0GX/9qiklUXMRdbU5Q==
+
+    # SLACK_ORG
+    - secure: GaBtGo6QghC3YXZ7X9tdIs1ywOg4p4x0K0IWEo4/gzVj4E9TQ//AOqHYQ8QJ40mCcVxwr5wzTMN44j4AVhadXWZj8ylKt84a0LJVZpi2PO6sdvw2gqaxzR5GUqBaRdbGuih1H6rsUdg4q3EJSKOXHwX7N8raa5wVBlO349y4ThfwOtgbNJ1gz3eg42L5iF9JfIkN82wreEk5lOeN1HYJ5Y//PNUxmZ9o6kI88ekjnV7NvjqH4CVAUpT+EiQFIkaeVlNRI/yhsYknOgnA6ls4FkzVYN9B/fn65R0d+LRbRFCSynPJwHNyiEScTT1/MruWQvVbMJ5AKw3kAy/jzzoZeQ==
+
+    # MONGOLAB_URI
+    - secure: ViN0QbUxxjWIzzM5iiB8pgEySMryOQITYjCjpzCsQP69AYguSCozxSI38+1bDlgDpNE3+5xIOindG9W3gI6h0gnNwFswfUdpDJ6Jun+vaS7+IgERiT9pvkOtKRkWHO2qmuTT5uXV57mJVuSuWCirGgTXuig0MATx90id7urapyPAVPkWAU49xFlAlj2mlFRbZkzptRAu6dgYyH6kQ2Y1SadftL9fapjKrk/+RlR86+UMcZxvyTG6ZyX7BJZv+o+rjeyard+zURxcW8dPcQg5uSqwDDmC+Ynqf4OpPtLuFDrUXLRhUkTkUugDp9YG8G+e6M+iy4KI1KBwaIMgeChC7g==
+
+    # I don know which vars are: must be
+    #  SLACK_HEROKU_TOKEN
+    #  SLACK_TOKEN
+    #  ????
+    - secure: QGLe0HJ0BXuAWKmjrPWLeeabGAuRGU7YuWM+nW5reb7r5JzEYGUsje5YHlSyigWd/X7cvb/9eG9yTnqS9FRN+WoQABy6X54vcaXpsl8am6ov+qpQL7KhfNduNdQKryaECcV1Jh2rlS3aTe8Dewjo65YJE5M+zhKV5OtJamMSU3DcbMg24vpCH/2dLJnZK9HY1aa9mBpG2jg/iymIjalJyZTCUBwswOLtoFazwMJ9Hj0f0a0Na5oW7ebsN+nK7m62uGD6WxMmwRVKihJcvDtZ/TE87e8weaZ0OcdFl23fvNJapEtaoWcgLrYr0oGHxfqJuODS2nVALVNZGmSKYKmPSA==
+    - secure: eKxBK5oAkHOcXccAOjt07tZ5A46NjsOT7MjslmwvBFB0Q7EiW5dS+GotH97tF5xBiRku0amMhm0HFAeHDgbbN+hdksrkG8OHsyAYY38Wsp1/wx7VbstxSVFrep5osfCfc9VKitB2yGbdYGJisC1XuZEr1MXpI/+WGKyDU7FQtcy0iAbDiPI1VIk3VymJh58PHGObQyOWjVStVJV9J7cGNofiYajmmqi1SJupIOoTaSM1kkBF6IWe2YII2TEqPywCynsvUDWUOLkKx4gjYfwe1SVTnnDfT+W4c2th9dDvzXhIF8jeVk4ijOZgyxWhiZXHQheyVibHczapVKAiDyD8Aw==
+    - secure: Fq/OEC43n9NM+fHYjgKmdytBxFckij4eh86ybG9h7TkkgfuI3OTAAnImLHQwBXsusbBlR3TyXM/Q5nE6anXDADNXS7Mx0hsuGd4Xk7hyt6xzajBzVjeIfEPjNbXh8R7xqpJszSmYREzrgjzkFUYfve7Bib7xrlyg2MDFrmPWh7iPwV4CfazWYl4a6PNAx80LOKLCQPmuOQGUGzKrvSbdhIPxFTigjMFvuOatzlJGRpSsdKBagz0Fvato9s0U7S0EX1Sx2TdFWsVYFer2DsLcUgLVyd8zEXDam/nCW7B0IxDVyVTh7BhVhtq0yPLb20bMcyWOa1DQ0kuSHf98EyRP7w==
+
+#branches:
+#  only:
+#    - master
+#    - develop
+
+notifications:
+  email:
+    recipients:
+      - jpizarrom@gmail.com
+    on_success: change
+    on_failure: always
+
+before_install:
+  - . $HOME/.rvm/scripts/rvm && rvm use ruby-2.0.0-p598 --default && ruby --version
+  - which heroku || wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  - APP_NAME=`echo $APP_UUID-$BRANCH | cut -c 1-30`
+  - npm -g install npm@2.1.3
+
+before_script:
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
+  - "export DISPLAY=:99.0"
+  - "/etc/init.d/xvfb start"
+
+script:
+  - ./node_modules/loopback-testing/node_modules/.bin/mocha test/api/unit/ -R xunit
+  - ./node_modules/.bin/gulp test
+  # - ./node_modules/.bin/protractor --version
+  # - ./node_modules/.bin/protractor --baseUrl='http://app.foodpoints.cl' test/client/protractor.conf.js
+  - ./node_modules/.bin/lb-ng server/server.js ./app/js/modules/common/lb-services.js -u https://$APP_NAME.herokuapp.com/api/v1
+  - ./node_modules/.bin/gulp
+
+# after_script:
+#   - "/etc/init.d/xvfb stop"
+#   - ./node_modules/.bin/istanbul cover test/client/protractor.conf.js -- -u tdd
+#   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+
+after_failure:
+  - python slack_notifier.py --project $APP_NAME --org $SLACK_ORG --token $SLACK_TOKEN
+
+after_success:
+  - python slack_notifier.py --project $APP_NAME.herokuapp.com --org $SLACK_ORG --token $SLACK_TOKEN -s
+  - test -f ~/.ssh/id_rsa.heroku || (ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.heroku && heroku keys:add ~/.ssh/id_rsa.heroku)
+  - heroku apps | grep ^$APP_NAME || ( (heroku create $APP_NAME -n && heroku addons:add mandrill --app $APP_NAME) || (heroku addons:add mandrill --app $APP_NAME))
+  - heroku addons --app $APP_NAME | grep deployhooks || heroku addons:add deployhooks:http --url=https://$SLACK_ORG.slack.com/services/hooks/heroku?token=$SLACK_HEROKU_TOKEN --app $APP_NAME
+  - heroku config:get MAIL_HOST --app $APP_NAME | grep . || heroku config:set MAIL_HOST=$APP_NAME.herokuapp.com --app $APP_NAME
+#  - >
+#    [[ $BRANCH != 'master' ]] && MONGOLAB_URI=`heroku config:get MONGOLAB_URI --app $APP_UUID-master`
+  - >
+    [[ $BRANCH != 'master' ]] && heroku config:set MONGOLAB_URI=$MONGOLAB_URI --app $APP_NAME || echo "ok"
+#  - git remote -v | grep ^heroku | grep ^$APP_NAME || heroku git:remote --ssh-git --app $APP_NAME
+  - git checkout -b deploy
+  - git add . -A
+  - git commit -m "-"
+  - git push git@heroku.com:$APP_NAME.git deploy:master -f
+#  - git push -f heroku deploy:master
+  - ./node_modules/.bin/protractor --baseUrl="https://$APP_NAME.herokuapp.com" test/client/protractor.conf.js
+  - "/etc/init.d/xvfb stop"
+  # - ./node_modules/.bin/istanbul cover test/client/protractor.conf.js -- -u tdd
+  # - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/
